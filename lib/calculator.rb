@@ -1,15 +1,23 @@
 class Calculator 
-	def add(*numeros)
+	def add(*numbers)
 		result = 0 
-		numeros.each { |number| result = result + number }
+		numbers.each { |number| result = result + number }
 		result 
 	end
 
-	def subtract(*numeros)
-		sort_numbers = numeros.sort.reverse
+	def subtract(*numbers)
+		sort_numbers = numbers.sort.reverse
 		result = sort_numbers.reduce{ |resta, numero| resta - numero }
+	end
+
+	def divide(*numbers)
+		result = numbers[0]
+		numbers[1..-1].each do |number| 
+			result = result / number.to_f
+		end
+		result 
 	end
 end
 
 c = Calculator.new 
-p c.subtract(10, 34, 20, 6, 10)
+puts c.divide(10, 2)
