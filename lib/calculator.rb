@@ -17,7 +17,15 @@ class Calculator
 		end
 		result 
 	end
+
+	def multiply(*numbers) 
+		result = 1 
+		numbers.each do |number| 
+			result *= number.to_f 
+		end
+		result  
+	end
 end
 
 c = Calculator.new 
-puts c.divide(10, 2)
+puts c.multiply(10, 2)
