@@ -28,4 +28,10 @@ describe Calculator do
 			expect(@calculator.subtract(10, 2, 12)).to eq(0)
 		end
 	end
+
+	context '.divide' do 
+		it 'return the divide of two numbers' do 
+			expect(@calculator.divide(10, 2)).to eq(5)
+		end
+	end
 end
