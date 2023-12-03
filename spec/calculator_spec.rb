@@ -30,8 +30,22 @@ describe Calculator do
 	end
 
 	context '.divide' do 
-		it 'return the divide of two numbers' do 
+		it 'returns the divide of two numbers' do 
 			expect(@calculator.divide(10, 2)).to eq(5)
+		end
+
+		it 'returns the divide of more than two numbers' do 
+			expect(@calculator.divide(100, 2, 2)).to eq(25)
+		end
+	end
+
+	context 'multiply' do 
+		it 'returns the multiply of two numbers' do 
+			expect(@calculator.multiply(2, 5)).to eq(10)
+		end
+
+		it 'returns the multiply of more than two numbers' do 
+			expect(@calculator.multiply(10, 2, 2)).to eq(40)
 		end
 	end
 end
