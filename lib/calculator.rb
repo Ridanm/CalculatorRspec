@@ -26,6 +26,3 @@ class Calculator
 		result  
 	end
 end
-
-c = Calculator.new 
-puts c.multiply(10, 2)
